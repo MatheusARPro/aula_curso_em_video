@@ -1,3 +1,9 @@
-from math import(cos, tan, sin)
+from math import radians, sin, cos, tan
+
 ang = float(input('Qual o valor do angulo: '))
-print('Do angulo de  {} graus \nO cosseno do angulo é {:.3f} \nO seno é {:.3f} \nA tangente é {:.3f}'.format(ang, cos(ang), sin(ang), tan(ang)))
+seno = sin(radians(ang))
+print('O angulo {} tem o SENO de {:.2f}'.format(ang, seno))
+coss = cos(radians(ang))
+print ('O angulo {} tem o cosseno de {:.2f}'.format(ang, coss))
+tang = tan(radians(ang))
+print('O angulo {} tem a TANGENTE de {:.2f}'.format(ang, tang))
