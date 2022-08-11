@@ -6,3 +6,4 @@ if dis <= 200:
 else:
     preco = dis * 0.45
     print(f'O preço da viage será de R${preco}')
+    
