@@ -9,4 +9,3 @@ if escolha == num_sort:
 else:
     print('Que pena, você PERDEU!!!')
     print(f'Eu estava pensando no numero {num_sort}!!')
-    
