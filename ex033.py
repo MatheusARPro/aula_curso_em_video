@@ -1,4 +1,4 @@
-n1 = float(input('Digite um número: '))
+'''n1 = float(input('Digite um número: '))
 n2 = float(input('Digite outro número: '))
 n3 = float(input('Digite o ultimo número: '))
 n_maior = 0
@@ -21,4 +21,23 @@ else:
         if n3 < n1 and n3 < n2:
            n_menor = n3
 print(f'O maior número é {n_maior}')
-print(f'O menor número é {n_menor}')
+print(f'O menor número é {n_menor}')'''
+
+a = int(input('Primeiro valor: '))
+b = int(input('Segundo  valor: '))
+c = int(input('Terceiro valor: '))
+
+menor = a
+
+if b<a and b<c:
+    menor = b
+if c<a and c<b:
+    menor = c
+
+maior = a
+if b>a and b>c:
+    maior = b
+if c>a and c>b:
+    maior = c
+print(f'O menor valor digitado foi {menor}')
+print(f'O maior valor digitado foi {maior}')
