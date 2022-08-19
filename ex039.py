@@ -17,4 +17,3 @@ elif idade > 18:
     ano = ano_atual - tempo_restante
     print(f'O alistamento venceu, ja passou {tempo_restante} anos do prazo.')
     print(f'Seu alistamento foi em {ano}')
-    
