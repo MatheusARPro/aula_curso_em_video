@@ -12,7 +12,7 @@ p3 = t3 > r1
 
 equilatero = r1 == r2 == r3
 isoceles = r1 == r2 != r3 or r1 == r3 != r2 or r2 == r3 != r1
-escaleno = r1 != r2 != r3
+escaleno = r1 != r2 != r3 != r1
 
 if p1 and p2 and p3:
     print('-=-'*15)
