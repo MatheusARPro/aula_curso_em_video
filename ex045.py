@@ -1,18 +1,19 @@
 from random import randint
 from time import sleep
 
-
+itens = ('PEDRA', 'PAPEL' , 'TESOURA')
 print(f'''{'%%' * 5}---JOKENPO---{'%%' * 5}
 [0] == PEDRA
 [1] == PAPEL
 [2] == TESOURA''')
 jogador = int(input('escolha: '))
 
-PEDRA = 0
-PAPEL = 1
-TESOURA = 3
+if jogador >= 3:
+    print('JOGADA INVÁLIDA!')
 
-sleep(2)
+computador = randint(0, 2)
+
+sleep(1)
 print('JO')
 sleep(1)
 print('KEN')
@@ -20,31 +21,30 @@ sleep(1)
 print('PO')
 sleep(1)
 
-computador = randint(0, 2)
-print('><[]><'* 5)
-print(f'ESCOLHAS: CPU {computador} X JOGADOR {jogador}')
-print('><[]><'* 5)
-if computador == PEDRA:
-    if jogador == PEDRA:
+
+
+print('><[]><'* 10)
+print(f'ESCOLHAS: COMPUTADOR {itens[computador]} X JOGADOR {itens[jogador]}')
+print('><[]><'* 10)
+if computador == 0: #PEDRA
+    if jogador == 0:
         print(f'''EMPATE!!!!!''')
-    elif jogador == PAPEL:
+    elif jogador == 1:
         print(f'''JOGADOR VENCEU!!!!!''')
-    elif jogador == TESOURA:
-        print(f'''CPU VENCEU!!!!!''')
-elif computador == PAPEL:
-    if jogador == PEDRA:
-        print(f'''CPU VENCEU!!!!!''')
-    elif jogador == PAPEL:
+    elif jogador == 2:
+        print(f'''COMPUTADOR VENCEU!!!!!''')
+elif computador == 1: #PAPEL
+    if jogador == 0:
+        print(f'''COMPUTADOR VENCEU!!!!!''')
+    elif jogador == 1:
         print(f'''EMPATE!!!!!''')
-    elif jogador == TESOURA:
+    elif jogador == 2:
         print(f'''JOGADOR VENCEU!!!!!''')
-elif computador == TESOURA:
-    if jogador == PEDRA:
+elif computador == 2: #TESOURA
+    if jogador == 0:
         print(f'''JOGADOR VENCEU!!!!!''')
-    elif jogador == PAPEL:
-        print(f'''CPU VENCEU!!!!!''')
-    elif jogador == TESOURA:
+    elif jogador == 1:
+        print(f'''COMPUTADOR VENCEU!!!!!''')
+    elif jogador == 2:
         print(f'''EMPATE!!!!!''')
-else:
-    print('ESCOLHA INVÁLIDA!')
-print('><[]><'* 5)
+print('><[]><'* 10)
