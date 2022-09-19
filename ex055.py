@@ -4,13 +4,13 @@ nome1 = 0
 nome2 = 0
 for c in range(0, 5):
     print('++' * 20)
-    nome = input('Nome: ')
     peso = float(input('Peso: '))
-    if peso >= ma_peso:
+    if c == 0:
         ma_peso = peso
-        nome1 = nome
+        me_peso = peso
     else:
-        if peso <= me_peso:
+        if peso > ma_peso:
+            ma_peso = peso
+        if peso < me_peso:
             me_peso = peso
-            nome2 = nome
-print(f'O mais pesado foi {nome1} com {ma_peso}Kg \nO mais leve foi {nome2} com {me_peso}Kg')
+print(f'O maior pes foi {ma_peso}Kg \nO menor peso foi {me_peso}Kg')
