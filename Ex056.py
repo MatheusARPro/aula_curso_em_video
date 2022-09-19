@@ -3,7 +3,7 @@ mulheres = 0
 tot_idade = 0
 for p in range(0, 4):
     print('##' * 10)
-    nome = input('Nome: ')
+    nome = str(input('Nome: ')).strip()
     sexo = input('Sexo [M/F]: ').upper()
     idade = int(input('Idade: '))
     tot_idade = tot_idade + idade
