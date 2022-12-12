@@ -14,9 +14,11 @@ while escolha != num_sort:
     if escolha == num_sort:
         print('PARABÉNS!!!!Você venceu!')
     else:
-        print('Que pena, você PERDEU!!!')
-        print(f'Eu pensei no {num_sort} e não no número {escolha}!!')
         print('TENTE NOVAMENTE!!!')
+        if escolha < num_sort:
+            print('TENTE UM NUMERO MAIOR!!!')
+        else:
+            print('TENTE UM NUMERO MENOR!!!')
     print('#' * 55)
 print(f'VOCÊ ACERTOU APÓS {tentativa} TENTATIVA(S)!!! ')
 print('#' * 55)
