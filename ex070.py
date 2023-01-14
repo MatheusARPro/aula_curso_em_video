@@ -1,5 +1,5 @@
 valor_total = menor_valor = c = maior_mil = 0
-produto_barato = 'hjh'
+produto_barato = ''
 while True:
     produto = str(input('Produto: '))
     valor = float(input('Valor: R$ '))
@@ -9,6 +9,7 @@ while True:
         maior_mil += 1
     if c == 1:
         menor_valor = valor
+        produto_barato = produto
     if valor < menor_valor:
         menor_valor = valor
         produto_barato = produto
