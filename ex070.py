@@ -1,5 +1,5 @@
 valor_total = menor_valor = c = maior_mil = 0
-produto_barato = ''
+produto_barato = ' '
 while True:
     produto = str(input('Produto: '))
     valor = float(input('Valor: R$ '))
@@ -22,4 +22,4 @@ while True:
 
 print(f'Total gasto: R${valor_total:.2f}')
 print(f'Produtos acima de R$1.000,00: {maior_mil}')
-print(f'Produto mais barato: {produto_barato}')
+print(f'Produto mais barato: {produto_barato} por {menor_valor}')
