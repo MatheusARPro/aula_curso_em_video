@@ -22,4 +22,4 @@ while True:
 
 print(f'Total gasto: R${valor_total:.2f}')
 print(f'Produtos acima de R$1.000,00: {maior_mil}')
-print(f'Produto mais barato: {produto_barato} por {menor_valor}')
+print(f'Produto mais barato: {produto_barato} por R${menor_valor:.2f}')
