@@ -13,3 +13,4 @@ if len(pilha) == 0:
     print('Sua expressão é válida!')
 else:
     print('Sua expressão não e válida!')
+    
