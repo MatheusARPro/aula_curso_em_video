@@ -4,7 +4,7 @@ pesado = list()
 leves = list()
 while True:
     dados.append(str(input('Nome: ')))
-    dados.append(int(input('Peso[Kg]: ')))
+    dados.append(float(input('Peso[Kg]: ')))
     cadastro.append(dados[:])
     resp = ' '
     while resp not in 'SN':
