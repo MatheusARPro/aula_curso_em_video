@@ -16,16 +16,22 @@ while True:
     if continuar in 'N':
         break
 print('=*=' *20)
-print(f'Total de pessoas adastradas: {len(lista_pessoa)}')
+print(f'-Total de pessoas adastradas: {len(lista_pessoa)}')
 for p in range(0, len(lista_pessoa)):
     soma_media += lista_pessoa[p]['Idade']
 media = soma_media / len(lista_pessoa)
-print(f'Média de idade do grupo: {media:.2f}')
+print(f'-Média de idade do grupo: {media:.2f}')
 for p in range(0, len(lista_pessoa)):
     if lista_pessoa[p]['Sexo'] in 'F':
         lista_mulher.append(lista_pessoa[p]['Nome'][:])
-print(f'Mulheres cadastradas: {lista_mulher}')
+print(f'-Mulheres cadastradas: {lista_mulher}')
 for p in range(0 , len(lista_pessoa)):
     if lista_pessoa[p]['Idade'] > media:
-        acima_media.append(lista_pessoa[p]['Nome'])
-print(f'Pessoas com idade acima da média: {acima_media}')
+        acima_media.append(lista_pessoa[p])
+print('-Pessoas com idade acima da média:')
+for p in range(0, len(acima_media)):
+    print(f'  Nome: {acima_media[p]["Nome"]} ', end=';')
+    print(f'Sexo: {acima_media[p]["Sexo"]} ', end=';')
+    print(f'Idade: {acima_media[p]["Idade"]} ', end=';')
+    print()
+print('<< ENCERRADO >>')
