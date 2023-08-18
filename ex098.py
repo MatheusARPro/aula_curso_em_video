@@ -8,12 +8,15 @@ def linha():
 
 
 def contador(inicio, fim, passo):
+    if passo == 0:
+        passo = 1
     if inicio > fim:
         while inicio > fim:
             print(inicio, end=' ')
             inicio -= passo
         print('FIM!')
     else:
+        fim += 1
         for numero in range(inicio, fim, passo):
             print(numero, end=' ')
         print('FIM!')
@@ -22,7 +25,7 @@ def contador(inicio, fim, passo):
 # code
 linha()
 print('Contagem de 1 ate 10 de 1 em 1: ')
-contador(1, 11, 1)
+contador(1, 10, 1)
 linha()
 print('Contagem de 10 ate 0 de 2 em 2: ')
 contador(10, 0, 2)
