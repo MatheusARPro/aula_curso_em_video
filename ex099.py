@@ -1,3 +1,7 @@
+#impotações
+from time import sleep
+
+
 #funções
 def linha():
     print('-=-' * 25)
@@ -8,8 +12,10 @@ def maior(*num):
     print('Analisando os valores passados...')
     for numero in num:
         print(f'{numero},', end='')
+        sleep(0.5)
     print(f'Foram passados no total {tamanho} numeros ao todo.')
     maior_numero = 0
+    sleep(0.5)
     for numero in num:
         if numero >= maior_numero:
             maior_numero = numero
