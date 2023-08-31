@@ -1,6 +1,6 @@
 #importações
 from random import randint
-
+from time import sleep
 
 #variaveis
 numeros = list()
@@ -10,7 +10,8 @@ def sorteio(lista):
     while len(numeros) < 5:
         numeros.append(randint(1, 20))
     for numero in range(0, len(numeros)):
-        print(numero, end=' ')
+        print(numero, end=' ', flush=True)
+        sleep(0.3)
     print('PRONTO!')
 
 
