@@ -6,7 +6,7 @@ def ficha(txt='<desconhecido>', gols=0):
     :param gols: Quantidade de gols.
     :return: nome com quantidade de gols.
     """
-    print(f'O jogador {txt} marcou {gols} gols!')
+    print(f'O jogador {txt} marcou {gols} gols no campeonato!')
 
 
 #codigo
