@@ -12,11 +12,11 @@ def ficha(txt='<desconhecido>', gols=0):
 #codigo
 nome = str(input('Nome do jogador: '))
 gol = str(input('Quantos gols marcados: '))
-if gol is int:
+if gol.isnumeric():
     g = int(gol)
 else:
     g = 0
-if nome == '':
+if nome.strip() == '':
     ficha(gols=g)
 else:
     ficha(nome, g)
