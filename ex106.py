@@ -1,8 +1,8 @@
 c = ('\033[m',          # 0 - sem cor
-     '\033[0;30;41m',
-     '\033[0;30;42m',
-     '\033[0;32;40m',
-     '\033[0;35;40m'
+     '\033[0;30;41m',   # 1 - Vermelho
+     '\033[0;30;42m',   # 2 - Verde
+     '\033[0;32;40m',   # 3 - Preto/Verde
+     '\033[0;35;40m'    # 4 - Preto/Roxo
      );
 
 
@@ -16,7 +16,7 @@ def titulo(msg, cor=0):
 
 
 def ajuda(comando):
-    titulo(f'Acessando o manual da função \'{comando}\'',2 )
+    titulo(f'Acessando o manual da função \'{comando}\'',2)
     print(c[3], end='')
     help(comando)
     print(c[0])
