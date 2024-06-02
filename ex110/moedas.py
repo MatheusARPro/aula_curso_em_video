@@ -32,3 +32,16 @@ def moeda(valor):
     decimal = str(f'{valor:,.2f}')
     formatado = decimal.replace(".", ",")
     return formatado
+
+def resumo(preco, aumento, reducao):
+    print('-' *33)
+    print(f'{"Registro de Valores":^33}')
+    print('=' *33)
+    print(f'{"Preço analisado: ":20}{"R$":>3}{moeda(preco)}')
+    print(f'{"Dobro do preço: ":20}{"R$":>3}{dobro(preco, True)}')
+    print(f'{"Metade do preço: ":20}{"R$":>3}{metade(preco, True)}')
+    print_aumento = f'{aumento}% de aumento: '
+    print(f'{print_aumento:20}{"R$":>3}{aumentar(preco, aumento, True)}')
+    print_reducao = f'{reducao}% de redução: '
+    print(f'{print_reducao:20}{"R$":>3}{diminuir(preco, reducao, True)}')
+    print('-' *33)
