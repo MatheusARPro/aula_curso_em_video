@@ -1,13 +1,17 @@
-import webbrowser
+import requests
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
 
 
 def acessa_site(url):
     try:
-        webbrowser.open(url)
-    except ConnectionError:
-        print(f'O site {url} não está acessível no momento.')
+        requests.get(url=url, verify=False)
+    except requests.exceptions.ConnectionError:
+        logging.debug(f'O site {url} não está acessível no momento.')
     else:
-        print(f'O site {url} está acessível no momento.')
+        logging.debug(f'O site {url} está acessível no momento.')
 
 
 acessa_site('https://pudim.com.br')
