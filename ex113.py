@@ -4,13 +4,13 @@ def leia_int(texto):
                 numero = int(input(texto))
             except (TypeError, ValueError):
                 print('O dado digitado não é um numero inteiro.Tente novamente.')
+                continue
             except (KeyboardInterrupt):
                 print('O usuário preferiu nao inserir dados.')
-                numero = 0
-                break
+                return 0
             else:
-                break
-        return numero
+                return  numero
+
 
 def leia_real(texto):
     while True:
@@ -21,10 +21,9 @@ def leia_real(texto):
         except (KeyboardInterrupt):
             print('O usuário preferiu nao inserir dados')
             numero = 0
-            break
+            return 0
         else:
-            break
-    return numero
+            return numero
 
 
 inteiro = leia_int('Digite um numero inteiro: ')
